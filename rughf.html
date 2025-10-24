@@ -1,0 +1,204 @@
+<!-- ==================== BOOKING SECTION (RED & WHITE THEME) ==================== -->
+<section class="booking-section-red">
+  <div class="booking-wrapper">
+    <div class="booking-info">
+      <h1>Certified & Award-Winning Car Repair Experts</h1>
+      <p>
+        We deliver reliable, fast, and expert car repair services. From engine diagnostics to
+        detailing — our certified technicians ensure your car runs like new, every time.
+      </p>
+    </div>
+
+    <div class="booking-form-card">
+      <h2>Book Your Service</h2>
+      <form class="booking-form">
+        <div class="input-box">
+          <input type="text" required />
+          <label>Your Name</label>
+        </div>
+        <div class="input-box">
+          <input type="email" required />
+          <label>Your Email</label>
+        </div>
+        <div class="input-box select">
+          <select required>
+            <option value="" disabled selected>Select A Service</option>
+            <option>Engine Repair</option>
+            <option>Oil Change</option>
+            <option>Car Wash</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <input type="date" required />
+          <label>Preferred Date</label>
+        </div>
+        <div class="input-box textarea">
+          <textarea required></textarea>
+          <label>Special Request</label>
+        </div>
+        <button type="submit" class="book-btn-red">Book Now</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CSS ==================== -->
+<style>
+.booking-section-red {
+  background: linear-gradient(135deg, #ffffff, #f3f3f3);
+  color: #222;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.booking-section-red::before {
+  content: "";
+  position: absolute;
+  width: 180%;
+  height: 180%;
+  top: -40%;
+  left: -40%;
+  background: radial-gradient(circle, rgba(255,0,0,0.15), transparent 70%);
+  animation: bgPulse 8s infinite alternate ease-in-out;
+}
+@keyframes bgPulse {
+  from { opacity: 0.5; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+.booking-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+}
+.booking-info {
+  flex: 1;
+  min-width: 320px;
+  padding: 20px;
+  animation: fadeLeft 1.5s ease forwards;
+}
+.booking-info h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #c20000;
+  margin-bottom: 1rem;
+}
+.booking-info p {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+.booking-form-card {
+  flex: 1;
+  min-width: 340px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 0 25px rgba(194, 0, 0, 0.1);
+  animation: fadeRight 1.5s ease forwards;
+  border-top: 6px solid #c20000;
+}
+.booking-form-card h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #c20000;
+}
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.input-box {
+  position: relative;
+}
+.input-box input,
+.input-box select,
+.input-box textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.input-box textarea {
+  height: 100px;
+  resize: none;
+}
+.input-box label {
+  position: absolute;
+  top: 13px;
+  left: 14px;
+  color: #777;
+  font-size: 0.95rem;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: #fff;
+  padding: 0 6px;
+}
+.input-box input:focus,
+.input-box textarea:focus,
+.input-box select:focus {
+  border-color: #c20000;
+  box-shadow: 0 0 8px rgba(194,0,0,0.3);
+}
+.input-box input:focus + label,
+.input-box input:valid + label,
+.input-box textarea:focus + label,
+.input-box textarea:valid + label {
+  top: -9px;
+  font-size: 0.8rem;
+  color: #c20000;
+}
+.book-btn-red {
+  background: #c20000;
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(194,0,0,0.3);
+}
+.book-btn-red:hover {
+  background: #ff0000;
+  box-shadow: 0 0 25px rgba(255,0,0,0.5);
+  transform: scale(1.05);
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@media (max-width: 768px) {
+  .booking-wrapper {
+    flex-direction: column;
+  }
+}
+</style>
+
+<!-- ==================== JS Scroll Animation ==================== -->
+<script>
+document.addEventListener("scroll", () => {
+  const left = document.querySelector(".booking-info");
+  const right = document.querySelector(".booking-form-card");
+  const trigger = window.scrollY + window.innerHeight;
+  [left, right].forEach(el => {
+    if (trigger > el.offsetTop + 100) {
+      el.style.opacity = 1;
+      el.style.transform = "translateY(0)";
+    }
+  });
+});
+</script>
