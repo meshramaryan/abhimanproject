@@ -101,23 +101,46 @@
     </nav>
     <!-- Navbar End -->
 
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-bg-2.jpg);">
-        <div class="container-fluid page-header-inner py-5">
-            <div class="container text-center">
-                <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center text-uppercase">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
-                    </ol>
-                </nav>
-            </div>
+<!-- Page Header Start -->
+<div class="container-fluid page-header mb-5 p-0" id="headerSlider"
+    style="background-image: url('img/carousel-bg-1.jpg');
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-position: center 30%;
+           transition: background-image 1.2s ease-in-out;">
+    <div class="container-fluid page-header-inner py-5">
+        <div class="container text-center">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center text-uppercase">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
+                </ol>
+            </nav>
         </div>
     </div>
-    <!-- Page Header End -->
+</div>
+<!-- Page Header End -->
+
+<!-- Background Slider Script -->
+<script>
+    const images = [
+        "img/carousel-bg-1.jpg",
+        "img/carousel-bg-2.jpg",
+         
+    ];
+
+    let current = 0;
+    const header = document.getElementById("headerSlider");
+
+    setInterval(() => {
+        current = (current + 1) % images.length;
+        header.style.backgroundImage = `url('${images[current]}')`;
+    }, 3000); // 4 seconds per slide
+</script>
+
+<!-- Page Header End -->
 
         
 

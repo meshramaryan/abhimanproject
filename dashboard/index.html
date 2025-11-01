@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Vision Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">Vision<span>UI</span></h2>
+      <ul>
+        <li class="active">🏠 Dashboard</li>
+        <li>📊 Analytics</li>
+        <li>🖼️ Gallery</li>
+        <li>💬 Comments</li>
+        <li>⚙️ Settings</li>
+      </ul>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="topbar">
+        <input type="text" placeholder="Search..." class="search">
+        <div class="profile">
+          <span class="notification">🔔</span>
+          <img src="https://i.pravatar.cc/40" alt="Profile" class="avatar">
+        </div>
+      </header>
+
+      <!-- Dashboard Cards -->
+      <section class="cards">
+        <div class="card"><h3>Users</h3><p>3,240</p></div>
+        <div class="card"><h3>Revenue</h3><p>$12,450</p></div>
+        <div class="card"><h3>Growth</h3><p>+24%</p></div>
+        <div class="card"><h3>New Orders</h3><p>310</p></div>
+      </section>
+
+      <!-- Chart -->
+      <section class="chart-section">
+        <canvas id="myChart"></canvas>
+      </section>
+
+      <!-- Comments -->
+      <section class="comments">
+        <h2>💬 Comments</h2>
+        <input type="text" id="commentInput" placeholder="Add a comment..." />
+        <button id="addComment">Add</button>
+        <ul id="commentList"></ul>
+      </section>
+
+      <!-- Gallery -->
+      <section class="gallery">
+        <h2>🖼️ Gallery</h2>
+        <input type="file" id="uploadPhoto" accept="image/*" />
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1427,3 +1427,183 @@ body.dark-mode .btn-animated {
     flex-direction: column;
   }
 } 
+
+.footer .btn-social {
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+    }
+
+    .footer .btn-social:hover {
+        background-color: #D81324;
+        color: #fff;
+        border-color: #D81324;
+        transform: translateY(-5px);
+    }
+
+    .footer .btn-link {
+        display: block;
+        text-decoration: none;
+        margin-bottom: 8px;
+        transition: 0.3s;
+    }
+
+    .footer .btn-link:hover {
+        color: #D81324;
+        transform: translateX(5px);
+    }
+
+    .footer h4 {
+        position: relative;
+    }
+
+    .footer h4::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        background-color: #D81324;
+        left: 0;
+        bottom: -10px;
+    }
+
+
+
+    /* 🌐 Make Everything Responsive */
+
+/* Navbar */
+.navbar-brand h2 {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand h2 {
+    font-size: 1.6rem;
+  }
+  .navbar {
+    padding: 10px 15px;
+  }
+  .carousel-caption h1 {
+    font-size: 1.6rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}
+
+/* Carousel Images */
+.carousel-item img {
+  height: 105vh;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 55vh;
+  }
+}
+
+/* About Section */
+@media (max-width: 768px) {
+  .about img {
+    height: 300px !important;
+    object-fit: cover;
+  }
+  .about .col-lg-6 {
+    text-align: center;
+  }
+}
+
+/* Service Boxes */
+.service-box {
+  padding: 25px 15px;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.service-box:hover {
+  transform: translateY(-5px);
+}
+.service-box i {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/* Responsive Service Grid */
+@media (max-width: 576px) {
+  .service-box {
+    margin-bottom: 20px;
+  }
+}
+
+/* 🔹 Responsive Photo Slider Fix */
+.slider-item {
+  width: 300px;
+  height: 250px;
+}
+@media (max-width: 768px) {
+  .slider-item {
+    width: 200px;
+    height: 160px;
+  }
+}
+@media (max-width: 480px) {
+  .slider-item {
+    width: 160px;
+    height: 140px;
+  }
+}
+
+/* Stop overflow sideways */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Text and heading resizing */
+h1, h2, h3 {
+  word-break: break-word;
+  text-wrap: balance;
+} 
+
+
+
+/* 💎 Confirm Booking Button (Rounded, Blue Theme, Glow) */
+.btn-confirm {
+  background: linear-gradient(90deg, #1976D2, #2E7D32);
+
+  color: #fff;
+  border: none;
+  border-radius: 50px;       /* 👈 makes it perfectly round */
+  padding: 14px 38px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* ✨ Hover Effects */
+.btn-confirm:hover {
+  background: linear-gradient(90deg, #1976D2, #2E7D32);
+   box-shadow: 0 8px 25px rgba(13, 110, 253, 0.6);
+}
+
+/* ⚡ Active Press Effect */
+.btn-confirm:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 10px rgba(109, 244, 151, 0.4);
+}
+
+
+
+
+
